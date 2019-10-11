@@ -1,0 +1,72 @@
+<head>
+    <!--Flex-Item Properties-->
+    <!--Order || Flex-grow || Flex-shrink || Flex-basis-->
+    <!--align-self: auto || flex-start || flex-end || center || baseline || stretch-->
+    <style>
+        .style-flex,
+        .style-flex-margin {
+            display: flex;
+            border: 1px solid red;
+            padding: 0;
+            list-style: none;
+            /*affects all flex-items*/
+            background-color: #e8e8e9;
+        }
+        
+        .item-flex {
+            width: 100px;
+            height: 100px;
+            background-color: #8cacea;
+            flex: auto;
+            /*remember this is same as flex: 1 1 auto;*/
+            border: 2px solid red;
+            margin: 2em;
+            /*flex-grow: 1;
+            flex-basis: 200px;*/
+            /*flex: 0 1 auto;*/
+        }
+        
+        .item-flex-margin {
+            width: 100px;
+            height: 100px;
+            background-color: #8cacea;
+            /*remember this is same as flex: 1 1 auto;*/
+            border: 2px solid red;
+            margin: 2em;
+            flex: 0 0 auto;
+        }
+        .item-flex-margin:nth-child(1) {    margin-right: auto; /*applied only to the right*/}
+        /*flex: 0 1 auto*/
+        /*This is same as writing flex: default and it's the default behavior of all flex items.*/
+        /*Flex: 0 0 auto*/
+        /*This is same as flex: none.*/
+        /*Flex: 1 1 auto*/
+        /*This is same as flex: auto.*/
+    </style>
+</head>
+
+<body>
+    <div>
+        <ul class="style-flex">
+            <li class="item-flex"> This is just some random text to buttress the point being explained. Some more random text to buttress the point
+                being explained. </li>
+            <li class="item-flex">This is just a shorter random text.</li>
+        </ul>
+        <ul class="style-flex-margin">
+            <li class="item-flex-margin"> Start </li>
+            <!--parent element-->
+            <li class="item-flex-margin">First</li>
+            <!--first child element-->
+            <li class="item-flex-margin">Second</li>
+            <!--second child element-->
+            <li class="item-flex-margin"> Third</li>
+            <!--third child element-->
+            <li class="item-flex-margin">First</li>
+            <!--first child element-->
+            <li class="item-flex-margin">Second</li>
+            <!--second child element-->
+            <li class="item-flex-margin"> Third</li>
+            <!--third child element-->
+        </ul>
+    </div>
+</body>

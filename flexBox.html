@@ -1,0 +1,67 @@
+<head>
+    <!--Flex Properties-->
+    <!--Flex-direction || Flex-wrap || Flex-flow || Justify-content || Align-items || Align-content-->
+    <!--flex-direction: row || column || row-reverse || column-reverse;-->
+    <!--flex-wrap: wrap || nowrap || wrap-reverse; -->
+    <!--flex-flow: row wrap; /*direction "row" and yes, please wrap the items.*/-->
+    <!-- flex-flow: row nowrap, flex-flow: column wrap, flex-flow: column nowrap-->
+    <!--justify-content: flex-start || flex-end || center || space-between || space-around-->
+    <!--align-items: flex-start || flex-end || center || stretch || baseline-->
+    <!--align-content: flex-start || flex-end || center || stretch -->
+    <!--Flex-Item Properties-->
+    <!--Order || Flex-grow || Flex-shrink || Flex-basis-->
+    <!--align-self: auto || flex-start || flex-end || center || baseline || stretch-->
+    <style>
+        ul {
+            display: flex;
+            /*or inline-flex*/
+            list-style: none;
+            flex-direction: row;
+            flex-wrap: wrap;
+            flex-flow: row wrap;
+            padding: 0;
+            background-color: #e8e8e9;
+            justify-content: flex-start;
+            border: 1px solid red;
+            min-height: 50%;
+        }
+        
+        li {
+            width: 100px;
+            height: 100px;
+            background-color: #8cacea;
+            margin: 8px;
+            padding: 4px;
+        }
+        
+        li:nth-child(1) {
+            order: 1;
+            /*give it a value higher than 0*/
+        }
+         li:nth-child(2) {
+           align-self: flex-end;
+            /*moves single element up down and stretch or middle*/
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <ul>
+            <!--parent element-->
+            <li>First</li>
+            <!--first child element-->
+            <li>Second</li>
+            <!--second child element-->
+            <li> Third</li>
+            <!--third child element-->
+            <li>First</li>
+            <!--first child element-->
+            <li>Second</li>
+            <!--second child element-->
+            <li> Third</li>
+            <!--third child element-->
+
+        </ul>
+    </div>
+</body>
